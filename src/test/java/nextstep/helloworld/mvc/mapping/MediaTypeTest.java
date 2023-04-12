@@ -60,6 +60,8 @@ public class MediaTypeTest {
                 .contentType(MediaType.TEXT_HTML_VALUE)
                 .body(containsString("user page"));
 
+        System.out.println("---");
+
         RestAssured.given().log().all()
                 .accept(MediaType.APPLICATION_JSON_VALUE)
                 .when().get("/media-type/users")
